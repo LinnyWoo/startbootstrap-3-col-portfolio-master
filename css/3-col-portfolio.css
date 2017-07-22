@@ -15,3 +15,21 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.portfolio-item >a {
+  position: relative;
+  display: block;
+}
+.portfolio-item > a::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.25s ease;
+}
+.portfolio-item>a:hover::after {
+  background-color: rgba(0, 0, 0, 0);
+}
